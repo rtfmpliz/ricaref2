@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8260CA7-934D-4D7E-99E9-866E81A40F81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Aplikasi_Penjualan</RootNamespace>
+    <AssemblyName>Aplikasi_Penjualan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\DialogBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DialogBarang.Designer.cs">
+      <DependentUpon>DialogBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DialogPelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DialogPelanggan.Designer.cs">
+      <DependentUpon>DialogPelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBarang.Designer.cs">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormPelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPelanggan.Designer.cs">
+      <DependentUpon>FormPelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTransaksi.Designer.cs">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu_Utama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu_Utama.Designer.cs">
+      <DependentUpon>Menu_Utama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kelas\Koneksi.cs" />
+    <Compile Include="Laporan\CetakBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\CetakBarang.Designer.cs">
+      <DependentUpon>CetakBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\CetakPelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\CetakPelanggan.Designer.cs">
+      <DependentUpon>CetakPelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\CetakTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\CetakTransaksi.Designer.cs">
+      <DependentUpon>CetakTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\report_barang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_barang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\report_pelanggan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_pelanggan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\report_transaksi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_transaksi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\report_transaksi2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_transaksi2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DialogBarang.resx">
+      <DependentUpon>DialogBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DialogPelanggan.resx">
+      <DependentUpon>DialogPelanggan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormBarang.resx">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormPelanggan.resx">
+      <DependentUpon>FormPelanggan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Menu_Utama.resx">
+      <DependentUpon>Menu_Utama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\CetakBarang.resx">
+      <DependentUpon>CetakBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\CetakPelanggan.resx">
+      <DependentUpon>CetakPelanggan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\CetakTransaksi.resx">
+      <DependentUpon>CetakTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\report_barang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_barang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\report_pelanggan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_pelanggan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\report_transaksi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_transaksi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\report_transaksi2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_transaksi2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1458.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_drop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beetailer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CachedImage_1920_1080_POS4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cacheIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_new.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComputerToastIcon.contrast-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create_32dp[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_black_20dp[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisplaySystemToastIcon.contrast-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dockH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-icon[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-topic-pencil[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elegantthemes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\komputer web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oobe-bookend-cortanaout.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rockettheme-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashScreen.scale-125_contrast-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Square44x44Logo.targetsize-40_altform-lightunplated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssms2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sugaroutfitters-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_add_filled_20_black_2x[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\templatemonster-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themeforest-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOOLICON.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woothemes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wpmu-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
